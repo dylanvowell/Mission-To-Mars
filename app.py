@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 from bs4 import BeautifulSoup as soup
-import pandas
+import scraping
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ def index():
    mars = mongo.db.mars.find_one()
    return render_template("index.html", mars=mars)
 
-   @app.route("/scrape")
+@app.route("/scrape")
 def scrape():
    mars = mongo.db.mars
    mars_data = scraping.scrape_all()
