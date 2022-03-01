@@ -102,7 +102,7 @@ def mars_facts():
 def hemisphere_image_urls(browser):
     # 1. Use browser to visit the URL 
     url = 'https://marshemispheres.com/'
-    browser.visit(url)
+    browser.visit(url+'index.html')
 
     # 2. Create a list to hold the images and titles.
     hemisphere_image_urls = []
